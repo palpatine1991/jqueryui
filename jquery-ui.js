@@ -1,7 +1,9 @@
-/*! jQuery UI - v1.11.4 - 2015-03-11
+/*! jQuery UI - v1.11.4.1 - 2016-11-03
 * http://jqueryui.com
 * Includes: core.js, widget.js, mouse.js, position.js, accordion.js, autocomplete.js, button.js, datepicker.js, dialog.js, draggable.js, droppable.js, effect.js, effect-blind.js, effect-bounce.js, effect-clip.js, effect-drop.js, effect-explode.js, effect-fade.js, effect-fold.js, effect-highlight.js, effect-puff.js, effect-pulsate.js, effect-scale.js, effect-shake.js, effect-size.js, effect-slide.js, effect-transfer.js, menu.js, progressbar.js, resizable.js, selectable.js, selectmenu.js, slider.js, sortable.js, spinner.js, tabs.js, tooltip.js
-* Copyright 2015 jQuery Foundation and other contributors; Licensed MIT */
+* Copyright 2015 jQuery Foundation and other contributors; Licensed MIT
+  Forked by palpatine1991
+*/
 
 (function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
@@ -9242,7 +9244,7 @@ $.ui.ddmanager = {
 			}
 
 			m[ i ].offset = m[ i ].element.offset();
-			m[ i ].proportions({ width: m[ i ].element[ 0 ].offsetWidth, height: m[ i ].element[ 0 ].offsetHeight });
+			m[ i ].proportions({ width: m[ i ].element[ 0 ].getBoundingClientRect().width, height: m[ i ].element[ 0 ].getBoundingClientRect().height });
 
 		}
 
